@@ -10,7 +10,13 @@ cat ~/.ssh/id_ed25519.pub
 ```
 [Copy and paste the publickey into GitHub](https://github.com/settings/keys)
 
-
+## Starting from an existing project
+``` bash
+cd [DIRECTORY NAME e.g. ~/projects]
+git clone git@github.com:[GITHUB PROJECT URL].git
+cd [project-name]
+uv sync
+```
 
 ## To make new projects
 Make a project with the correct name on GitHub and then enter the following on the WSL terminal starting from a directory you want to make the new project in, e.g. 
