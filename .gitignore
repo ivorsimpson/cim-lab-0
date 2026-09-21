@@ -5,6 +5,12 @@ build/
 dist/
 wheels/
 *.egg-info
+*.DS_Store
+*.pt
+
 
 # Virtual environments
 .venv
+wandb
+data
+outputs

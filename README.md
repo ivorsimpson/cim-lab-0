@@ -7,8 +7,8 @@ The objectives of this lab session are as follows:
 # Overview
 1. Get started with WSL/VSCode/Jupter on the lab machines
 2. Clone this project and get started using uv for package management
-3. Create and link a [wandb](https://wandb.ai/) account, run the classifier experiment and visualise the results.
-4. Change the experimental setup in (hydra) and save results to wandb
+3. Train a classifier and change the experimental setup using (hydra)
+4. Create and link a [wandb](https://wandb.ai/) account, run the classifier experiment and visualise the results.
 5. Push this project to your GitHub account.
 
 
@@ -24,18 +24,22 @@ cd cim-lab-0
 uv sync
 ```
 
+## 3. Training a classifier
+
 to test that it works, type
 ``` bash
-uv run 
+uv run python -m cim_lab_0.train 
 ```
+
+where you can adjust configurable aspects of the model architecture and training setup (as given in config.py) from the command line e.g.
+``` bash
+uv run python -m cim_lab_0.train  model.hidden_layers=1 model.hidden_neurons=32 seed=7 training.learning_rate=0.005
+```
+
 
 ## 3. Weights and Biases
 Make an account at [wandb.ai](https://wandb.ai/).
 
-
-
-## 4. Experimental Tracking
-We are using [Hydra](https://hydra.cc/docs/intro/) for experimental setup, which allows us to use .yaml files to hold our experimental parameters.
 
 ## 5. Version control
 Git is the industry standrard for version control, and we encourage you to use GitHub to store information. Please follow the process detailed [here](https://github.com/ivorsimpson/cim-lab-0/blob/main/GithubSupport.md).
