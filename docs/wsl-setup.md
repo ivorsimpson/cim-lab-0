@@ -24,24 +24,18 @@ The latest version of the install script is hosted on github. To obtain the inst
 
 ```powershell
 cd $HOME\Downloads
-curl.exe -O https://github.com/<user>/<repo>/archive/refs/heads/<branch>.zip
+curl.exe -O https://raw.githubusercontent.com/ivorsimpson/cim-lab-wsl/refs/heads/master/dist/sussex-cim-bootstrap.ps1
 ```
 
-Once the `zip` file is downloaded please unzip the file: 
+**Please make sure that `sussex-cim-bootstrap.ps1` in your Downloads directory before proceeding.**
 
-```powershell
-Expand-Archive -Path file.zip -DestinationPath .
-```
-
-The unzipped files should now be located in your Downloads directory. **Please make sure that `sussex-cim-bootstrap.ps1` in your Downloads directory before proceeding.**
-
-To use the script please allow the downloaded script for this session:
+To use the script please allow the downloaded script for this session from within the Downloads directory:
     
 ```powershell
 Unblock-File .\sussex-cim-bootstrap.ps1
 ```
 
-We are now ready to smoke test the install script. Please execute the following command.  
+We are now ready to install the Linux enviroment script. Please execute the following command.  
 
 ```powershell
 .\sussex-cim-bootstrap.ps1 -Name cim-smoke -SkipLaunch
