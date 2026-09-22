@@ -13,7 +13,7 @@ The objectives of this lab session are as follows:
 
 
 ## 1. Machine Setup
-See the guide [here]().
+See the guide [here](docs/wsl-setup.md).
 
 ## 2. Project Startup
 Within a WSL terminal session (possibly in VSCode) 
@@ -43,9 +43,3 @@ Make an account at [wandb.ai](https://wandb.ai/).
 
 ## 5. Version control
 Git is the industry standrard for version control, and we encourage you to use GitHub to store information. Please follow the process detailed [here](https://github.com/ivorsimpson/cim-lab-0/blob/main/GithubSupport.md).
-
-
-
-
-
-
