@@ -33,7 +33,7 @@ Once the `zip` file is downloaded please unzip the file:
 Expand-Archive -Path file.zip -DestinationPath .
 ```
 
-The unzipped files should now be located in your Downloads directory. Please make sure that `sussex-cim-bootstrap.ps1` in your Downloads directory before proceeding.
+The unzipped files should now be located in your Downloads directory. **Please make sure that `sussex-cim-bootstrap.ps1` in your Downloads directory before proceeding.**
 
 To use the script please allow the downloaded script for this session:
     
