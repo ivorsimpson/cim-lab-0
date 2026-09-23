@@ -73,7 +73,7 @@ To navigate to the project directory use `cd` to move in your file system:
 cd ~/projects/
 ```
 
-You have now successfully installed WSL and are ready to run code with CUDA GPU support. To finalise the setup change directory into `cim-smoke` and run `uv run src/gpu-test.py`. You can exit WSL with `exit` in the terminal. 
+You have now successfully installed WSL and are ready to run code with CUDA GPU support. To finalise the setup change directory into `cim-smoke` and run `uv run src/check_gpu.py`. You can exit WSL with `exit` in the terminal. 
 
 ## Additional Information
 ### What the script installs
