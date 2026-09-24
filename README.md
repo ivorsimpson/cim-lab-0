@@ -42,4 +42,4 @@ Make an account at [wandb.ai](https://wandb.ai/).
 
 
 ## 5. Version control
-Git is the industry standrard for version control, and we encourage you to use GitHub to store information. Please follow the process detailed [here](https://github.com/ivorsimpson/cim-lab-0/blob/main/GithubSupport.md).
+Git is the industry standrard for version control, and we encourage you to use GitHub to store information. Please follow the process detailed [here](docs/github-support.md).
