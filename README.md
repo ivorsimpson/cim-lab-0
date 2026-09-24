@@ -13,10 +13,12 @@ The objectives of this lab session are as follows:
 
 
 ## 1. Machine Setup
-See the guide [here](docs/wsl-setup.md).
+If you're using one of the Windows lab machines, please follow the guidance [here](docs/wsl-setup.md).
+
+Please note that WSL installs on the local machine, not on your network drive and it's not guaranteed to persist indefinitely. This is excellent motivation to back up all your code using GitHub and model artefacts (weights, training information) on wandb. It is also possible to mount your network filesystem.
 
 ## 2. Project Startup
-Within a WSL terminal session (possibly in VSCode) 
+Within a WSL terminal session (from VSCode, if you like) 
 ``` bash
 cd ~/
 git clone https://github.com/ivorsimpson/cim-lab-0

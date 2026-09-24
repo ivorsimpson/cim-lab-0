@@ -6,6 +6,8 @@ This script creates a private Ubuntu 24.04 WSL 2 distribution, installs Python t
 
 ## Install steps
 
+If you plan to use **Visual Studio Code**, please launch it via the Software Hub on the desktop first. Make sure you install both the WSL extension and the Python extension, and the following the instructions below.
+
 Firstly, we need to verify if wsl is installed on your machine: 
 
 ```powershell
@@ -73,7 +75,24 @@ To navigate to the project directory use `cd` to move in your file system:
 cd ~/projects/
 ```
 
-You have now successfully installed WSL and are ready to run code with CUDA GPU support. To finalise the setup change directory into `cim-smoke` and run `uv run src/check_gpu.py`. You can exit WSL with `exit` in the terminal. 
+You have now successfully installed WSL and are ready to run code with CUDA GPU support! To finalise the setup change directory into `cim-smoke` and run `uv run src/check_gpu.py`. You can exit WSL with `exit` in the terminal. 
+
+
+If you prefer to use notebooks rather than Visual Studio Code, you can do this by launching Jupyter lab
+```bash
+uv run jupyter lab --no-browser
+```
+and then access it via your favourite web browser.
+
+Once you've installed the VS Code extension (a relogin may be required) you can boot VSCode from WSL directly by typing
+```bash
+code .
+```
+
+You can also access the WSL filesystem from VS code (or the file browser via) 
+```
+\\wsl.localhost\LabGPU\home\<username>\
+```
 
 ## Additional Information
 ### What the script installs
