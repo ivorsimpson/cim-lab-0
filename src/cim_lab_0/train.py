@@ -102,6 +102,13 @@ def main(cfg: DictConfig) -> None:
     print(f"Using device: {device}")
     print(OmegaConf.to_yaml(cfg))
 
+    if cfg.logging.use_wandb:
+        import wandb
+        wandb.init(
+            project=cfg.logging.project,
+            config=OmegaConf.to_container(cfg, resolve=True),
+        )
+
     for epoch in range(1, cfg.training.epochs + 1):
         train_loss, train_accuracy = run_epoch(
             model,
@@ -132,9 +139,15 @@ def main(cfg: DictConfig) -> None:
             f"test accuracy {test_accuracy:.3%}"
         )
 
+        if cfg.logging.use_wandb:
+            wandb.log(metrics)
+
     model_path = project_root / "mnist_classifier.pt"
     torch.save(model.state_dict(), model_path)
 
+    if cfg.logging.use_wandb:
+        wandb.save(str(model_path)) 
+        wandb.finish()
 
 
 if __name__ == "__main__":

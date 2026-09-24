@@ -37,8 +37,11 @@ uv run python -m cim_lab_0.train  model.hidden_layers=1 model.hidden_neurons=32 
 ```
 
 
-## 3. Weights and Biases
-Make an account at [wandb.ai](https://wandb.ai/).
+## 4. Weights and Biases
+
+Weights and Biases (W&B) is a platform for tracking machine learning experiments.
+ 
+Follow [here](docs/wandb.md) to setup your account and get started
 
 
 ## 5. Version control
