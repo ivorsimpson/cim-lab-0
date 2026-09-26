@@ -29,7 +29,11 @@ class TrainingConfig:
     epochs: int = 5
     learning_rate: float = 1e-3
 
-
+@dataclass
+class LoggingConfig:
+    """Configuration for experiment logging."""
+    use_wandb: bool = False
+    project: str = "cim-lab-0"
 @dataclass
 class ExperimentConfig:
     """Complete experiment configuration."""
@@ -38,6 +42,7 @@ class ExperimentConfig:
     model: ModelConfig = field(default_factory=ModelConfig)
     data: DataConfig = field(default_factory=DataConfig)
     training: TrainingConfig = field(default_factory=TrainingConfig)
+    logging: LoggingConfig = field(default_factory=LoggingConfig)
 
 
 def register_config() -> None:
