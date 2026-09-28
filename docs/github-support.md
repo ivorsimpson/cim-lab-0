@@ -1,6 +1,6 @@
 
 
-## For GitHub key setup
+## For GitHub key setup (keys needs to be placed in ~/.ssh, best to stick with the default location/filename)
 ``` bash
 git config --global user.email "[EMAIL]"
 git config --global user.name "[NAME]"
