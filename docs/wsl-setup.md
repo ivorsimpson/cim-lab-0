@@ -78,7 +78,7 @@ cd ~/projects/
 You have now successfully installed WSL and are ready to run code with CUDA GPU support! To finalise the setup change directory into `cim-smoke` and run `uv run src/check_gpu.py`. You can exit WSL with `exit` in the terminal. 
 
 
-If you prefer to use notebooks rather than Visual Studio Code, you can do this by launching Jupyter lab
+If you prefer to use notebooks rather than Visual Studio Code, you can do this by launching Jupyter lab, but make sure you are in a project directory (like cim-smoke) where there is a Python environment containing jupyter-lab.
 ```bash
 uv run jupyter lab --no-browser
 ```
