@@ -10,6 +10,11 @@ cat ~/.ssh/id_ed25519.pub
 ```
 [Copy and paste the publickey into GitHub](https://github.com/settings/keys)
 
+Check your keys work!
+```bash
+ssh -T git@github.com
+```
+
 ## Starting from an existing repository
 ``` bash
 cd [DIRECTORY NAME e.g. ~/projects]
