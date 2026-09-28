@@ -21,7 +21,7 @@ Copy your API key from the W&B website and paste it into the terminal.
 Our training script has a config option for W&B. Run an experiment with W&B enabled:
 
 ```bash
-uv run python -m cim_lab_0.train logging.use_wandb=true
+uv run python src/cim_lab_0/train.py logging.use_wandb=true
 ```
 
 ## Explore your run
@@ -38,9 +38,9 @@ Inspect the run to find:
 Run another experiment with a different configuration:
 
 ```bash
-uv run python -m cim_lab_0.train \
+uv run python src/cim_lab_0/train.py \
     logging.use_wandb=true \
-    model.hidden_layers=1 \
+    model.hidden_layers=1 \ 
     model.hidden_neurons=32
 ```
 
