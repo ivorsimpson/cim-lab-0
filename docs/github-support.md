@@ -22,6 +22,13 @@ eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/[keyname, e.g. id_ed25519]
 ```
 
+Check your keys work!
+```bash
+ssh -T git@github.com
+```
+
+**Note: If you reinstantiate the WSL environment the `eval "$(ssh-agent -s)" ` and the key adding `ssh-add ~/.ssh/[keyname, e.g. id_ed25519]`  needs to be run again. Otherwise the machine won't be able to authenticate itself with Github.** If you get access denied, that is the most likely culprit. 
+
 
 ## If you want to copy a repository within GitHub you can make a "Fork" of it to your user, and then follow the instruction below for working from that
 
