@@ -15,6 +15,8 @@ Check your keys work!
 ssh -T git@github.com
 ```
 
+## If you want to copy a repository within GitHub you can make a "Fork" of it to your user, and then follow the instruction below for working from that
+
 ## Starting from an existing repository
 ``` bash
 cd [DIRECTORY NAME e.g. ~/projects]
@@ -23,21 +25,30 @@ cd [project-name]
 uv sync
 ```
 
-## To make new projects
+## If you want to push a version of a repository you cloned to your GitHub, you need to make a new empty repository on GitHub and perform the following steps
+```bash
+cd [project-name]
+git remote remove origin
+git remote add origin https://github.com/[your username]/[your repo name].git
+ 
+git push -u origin main
+```
+
+
+## To make new projects from scratch
 Make a repostiory with the correct name on GitHub and then enter the following on the WSL terminal starting from a directory you want to make the new project in, e.g. 
 
 ``` bash
-uv python install 3.12 --default
-
 cd [DIRECTORY NAME e.g. ~/projects]
-uv init [project-name]
+git clone git@github.com:[GITHUB PROJECT URL].git
 cd [project-name]
-uv add [packges]
+uv init [project-name]
+uv python install 3.12
+uv add [python packges]
 
-git add *
+# When you've got your code ready
+git add [filenames or *]
 
 git commit -m "[message]"
-git branch -M main
-git remote add origin git@github.com:[GITHUB PROJECT URL].git
 git push -u origin main
 ```
