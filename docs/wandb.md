@@ -15,6 +15,7 @@ uv run wandb login
 ```
 
 Copy your API key from the W&B website and paste it into the terminal.
+**Ensure you make a copy of your API key on your email/cloud storage or similar for ease of future use**
 
 ## Run an experiment
 
