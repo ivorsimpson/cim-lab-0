@@ -15,6 +15,14 @@ Check your keys work!
 ssh -T git@github.com
 ```
 
+**Make sure you make a copy of your private and public keys for future use**
+If you're copying some keys you already have, put them in .ssh and type the following the start the ssh agent and make it aware of your private keys
+```bash
+eval "$(ssh-agent -s)" 
+ssh-add ~/.ssh/[keyname, e.g. id_ed25519]
+```
+
+
 ## If you want to copy a repository within GitHub you can make a "Fork" of it to your user, and then follow the instruction below for working from that
 
 ## Starting from an existing repository
