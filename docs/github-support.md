@@ -10,10 +10,6 @@ cat ~/.ssh/id_ed25519.pub
 ```
 [Copy and paste the publickey into GitHub](https://github.com/settings/keys)
 
-Check your keys work!
-```bash
-ssh -T git@github.com
-```
 
 **Make sure you make a copy of your private and public keys for future use**
 If you're copying some keys you already have, put them in .ssh and type the following the start the ssh agent and make it aware of your private keys
