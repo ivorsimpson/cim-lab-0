@@ -36,9 +36,9 @@ cd [project-name]
 uv sync
 ```
 
-## If you want to push a version of a repository you cloned to your GitHub, you need to make a new empty repository on GitHub and perform the following steps
+## If you want to push a version of a repository that you have cloned, to your GitHub, you need to make a new empty repository on GitHub and perform the following steps
 ```bash
-cd [project-name]
+cd [repo name]
 git remote remove origin
 git remote add origin git@github.com:[your username]/[your repo name].git
 git branch -M main
